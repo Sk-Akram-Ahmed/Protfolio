@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Custom Luxury Light Palette Token Mapping */
+    /* #F4F1EA (Light Warm Parchment), #1C160E (Rich Espresso), #D0C9B8 (Soft Taupe/Bronze), #EAE6DC (Soft Cream Card) */
+    --background: #ffffff;
+    --foreground: #1C160E;
+    --card: #EAE6DC;
+    --card-foreground: #1C160E;
+    --popover: #EAE6DC;
+    --popover-foreground: #1C160E;
+    
+    --primary: #1C160E;
+    --primary-foreground: #F4F1EA;
+    --primary-glow: rgba(28, 22, 14, 0.15);
+
+    --secondary: #EAE6DC;
+    --secondary-foreground: #1C160E;
+
+    --muted: #EAE6DC;
+    --muted-foreground: #7D7566;
+
+    --accent: #8C7853;
+    --accent-foreground: #F4F1EA;
+    --accent-glow: rgba(140, 120, 83, 0.2);
+
+    --success: #10b981;
+    --success-foreground: #ffffff;
+
+    --error: #ef4444;
+    --error-foreground: #ffffff;
+
+    --border: #D0C9B8;
+    --input: #D0C9B8;
+    --ring: #1C160E;
+    --radius: 0.85rem;
+  }
+
+  .dark {
+    /* Custom Luxury Dark Palette Token Mapping */
+    /* #000000 (Pure Black), #1F150C (Dark Espresso), #412D15 (Warm Bronze), #E1DCC9 (Parchment Cream) */
+    --background: #000000;
+    --foreground: #E1DCC9;
+    --card: #1F150C;
+    --card-foreground: #E1DCC9;
+    --popover: #1F150C;
+    --popover-foreground: #E1DCC9;
+
+    --primary: #E1DCC9;
+    --primary-foreground: #000000;
+    --primary-glow: rgba(225, 220, 201, 0.25);
+
+    --secondary: #1F150C;
+    --secondary-foreground: #E1DCC9;
+
+    --muted: #1F150C;
+    --muted-foreground: #a39b8b;
+
+    --accent: #412D15;
+    --accent-foreground: #E1DCC9;
+    --accent-glow: rgba(65, 45, 21, 0.45);
+
+    --border: #412D15;
+    --input: #412D15;
+    --ring: #E1DCC9;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+}
+
+/* Typography Scale Utilities */
+.text-display {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.text-hero {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.text-subheading {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.font-code {
+  font-family: var(--font-mono), monospace;
+}
+
+/* Glassmorphism & Neumorphism Utilities with Warm Luxury Palette */
+.glass-panel {
+  background: rgba(31, 21, 12, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(65, 45, 21, 0.6);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(31, 21, 12, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(65, 45, 21, 0.5);
+}
+
+.neo-press {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.8), inset -2px -2px 5px rgba(65, 45, 21, 0.3);
+}
+
+.glow-border {
+  position: relative;
+}
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #E1DCC9, #412D15, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Soft Gradients & Warm Luxury Aesthetic */
+.gradient-text {
+  background: linear-gradient(135deg, #E1DCC9 0%, #a39b8b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-stripe {
+  background: linear-gradient(135deg, #E1DCC9 0%, #c5bba3 40%, #412D15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-surface {
+  background: radial-gradient(circle at 50% 0%, rgba(65, 45, 21, 0.35) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+/* Ambient Ambient Background Mesh */
+.mesh-bg {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(65, 45, 21, 0.25) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(31, 21, 12, 0.4) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(225, 220, 201, 0.05) 0px, transparent 50%);
+}
+
+html {
+  scroll-behavior: initial;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
