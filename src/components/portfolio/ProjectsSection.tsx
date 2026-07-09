@@ -18,24 +18,17 @@ export function ProjectsSection() {
   const projectsToDisplay = [
     {
       id: "proj-1",
-      title: "AI Powered Cloud Studio",
-      description: "Enterprise SaaS platform featuring real-time collaborative code execution, WebGL visualizations, and distributed microservices architecture handling millions of requests daily.",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
-      demoUrl: "https://example.com",
+      title: "Multimodal Fake Product Hype Detection System",
+      description: "Developed an end-to-end multimodal machine learning pipeline combining TF-IDF, BERT embeddings, anomaly detection, and behavioral modeling to fuse text, temporal, and reviewer signals into an explainable Hype Score for detecting artificially inflated product ratings on Amazon and Yelp datasets. Designed a modular architecture featuring a 9-stage data pipeline, SHAP explainability, and Streamlit dashboard.",
+      image: "/hype_detection.png",
+      demoUrl: "https://github.com/Sk-Akram-Ahmed/Fake-product-hype-detection",
     },
     {
       id: "proj-2",
-      title: "FinTech Analytics Engine",
-      description: "High-throughput financial analytics engine with interactive chart visualizations and WebSocket streaming capability.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-      demoUrl: "https://example.com",
-    },
-    {
-      id: "proj-3",
-      title: "Headless E-Commerce Storefront",
-      description: "Next.js App Router storefront with fluid Lenis scroll integration, Stripe checkout, and server-driven inventory caching.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-      demoUrl: "https://example.com",
+      title: "Wanderlust — Travel Listings Application",
+      description: "Developed a full-stack travel listings application using Node.js, Express, MongoDB, and Mongoose with complete CRUD functionality and RESTful route architecture. Built server-side rendered views using EJS templating and implemented method-override middleware to support PUT and DELETE requests via HTML forms.",
+      image: "/wanderlust.png",
+      demoUrl: "https://github.com/Sk-Akram-Ahmed/wonderlust-backend",
     },
   ];
 

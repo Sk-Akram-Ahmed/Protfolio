@@ -108,10 +108,10 @@ export function HeroSection() {
               <Button
                 variant="stripe"
                 size="xl"
-                onClick={() => setShowResumeModal(true)}
+                onClick={() => window.open('/Sk_Akram_Ahmed_Resume.pdf', '_blank')}
                 className="w-full sm:w-auto font-semibold font-mono border border-[#412D15]"
               >
-                <FileText className="w-5 h-5 mr-2 text-[#E1DCC9]" /> Download Resume
+                <FileText className="w-5 h-5 mr-2 text-[#E1DCC9]" /> View Resume
               </Button>
             </Magnetic>
           </motion.div>

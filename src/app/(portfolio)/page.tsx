@@ -5,7 +5,6 @@ import { ExperienceSection } from "@/components/portfolio/ExperienceSection";
 import { SkillsSection } from "@/components/portfolio/SkillsSection";
 import { CertificatesSection } from "@/components/portfolio/CertificatesSection";
 import { ContactSection } from "@/components/portfolio/ContactSection";
-import { Footer } from "@/components/portfolio/Footer";
 
 export default function HomePage() {
   return (
@@ -19,7 +18,6 @@ export default function HomePage() {
         <CertificatesSection />
         <ContactSection />
       </main>
-      <Footer />
     </>
   );
 }

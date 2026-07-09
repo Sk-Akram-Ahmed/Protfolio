@@ -261,18 +261,27 @@ export function Navbar() {
                 </div>
                 <h3 className="text-2xl font-bold font-heading">Curriculum Vitae</h3>
                 <p className="text-sm text-muted-foreground">
-                  Sk Akram Ahmed — Senior Full Stack Engineer & Software Architect.
+                  Sk Akram Ahmed — Full Stack Developer & Cybersecurity Enthusiast.
                 </p>
               </div>
 
               <div className="border border-border/60 rounded-2xl p-4 bg-card/40 space-y-2 text-xs text-muted-foreground font-mono">
-                <div>• 6+ Years Experience</div>
-                <div>• Architecture & React Performance Specialist</div>
-                <div>• Cloud Distributed Systems</div>
+                <div>• Specialized in Java, JavaScript, React.js, Node.js & SQL</div>
+                <div>• Trainee at MassMutual (2025)</div>
+                <div>• B.Tech in Computer Science Engineering</div>
               </div>
 
               <div className="flex gap-3 pt-2">
-                <Button variant="linear" className="flex-1 font-semibold" onClick={() => alert("Downloading Sk_Akram_Ahmed_Resume.pdf...")}>
+                <Button 
+                  variant="linear" 
+                  className="flex-1 font-semibold" 
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/Sk_Akram_Ahmed_Resume.pdf';
+                    link.download = 'Sk_Akram_Ahmed_Resume.pdf';
+                    link.click();
+                  }}
+                >
                   <Download className="w-4 h-4 mr-2" /> Download PDF
                 </Button>
                 <Button variant="glass" onClick={() => setShowResumeModal(false)}>
